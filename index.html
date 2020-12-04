@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Manage landing page</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="mobile-overlay" id="backDrop"></div>
+    <header>
+      <img src="./images/logo.svg" class="logo" alt="" />
+      <nav>
+        <figure>
+          <img
+            src="./images/icon-hamburger.svg"
+            class="menu hide-desktop"
+            id="openBtn"
+            alt=""
+          />
+        </figure>
+        <figure>
+          <img
+            src="./images/icon-close.svg"
+            class="menu hide-desktop close-btn"
+            id="closeBtn"
+            alt=""
+          />
+        </figure>
+
+        <ul class="hide-mobile show-desktop" id="nav">
+          <li class="menu-item"><a href="#">Pricing</a></li>
+          <li class="menu-item"><a href="#">Product</a></li>
+          <li class="menu-item"><a href="#">About Us</a></li>
+          <li class="menu-item"><a href="#">Careers</a></li>
+          <li class="menu-item"><a href="#">Community</a></li>
+        </ul>
+      </nav>
+      <span class="get-started hide-me"><a href="#"> Get Started</a> </span>
+    </header>
+
+    <img src="./images/bg-tablet-pattern.svg" class="bg-mobile" alt="" />
+    <img src="./images/bg-tablet-pattern.svg" class="bg-desktop" alt="" />
+    <img src="./images/bg-tablet-pattern.svg" class="bg-mobile-md" alt="" />
+
+    <section>
+      <div class="container">
+        <div class="illustration-img card">
+          <img src="./images/illustration-intro.svg" alt="" />
+        </div>
+        <div class="big-header card">
+          <h1>Bring everyone together to build better products.</h1>
+          <p>
+            Manage makes it simple for software teams to plan day-to-day tasks
+            while keeping the larger team goals in view.
+          </p>
+          <span class="get-started landing-pg"
+            ><a href="#"> Get Started</a>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container1">
+        <div class="what-different-heading card">
+          <h2>What’s different about Manage?</h2>
+          <p>
+            Manage provides all the functionality your team needs, without the
+            complexity. Our software is tailor-made for modern digital product
+            teams.
+          </p>
+        </div>
+
+        <div class="what-is-different-content card">
+          <div class="what-different-listing">
+            <div class="num-heading">
+              <span class="num">01</span>
+              <span class="heading">Track company-wide progress</span>
+            </div>
+            <p>
+              See how your day-to-day tasks fit into the wider vision. Go from
+              tracking progress at the milestone level all the way done to the
+              smallest of details. Never lose sight of the bigger picture again.
+            </p>
+          </div>
+
+          <div class="what-different-listing">
+            <div class="num-heading">
+              <span class="num">02</span>
+              <span class="heading">Advanced built-in reports</span>
+            </div>
+            <p>
+              Set internal delivery estimates and track progress toward company
+              goals. Our customisable dashboard helps you build out the reports
+              you need to keep key stakeholders informed.
+            </p>
+          </div>
+
+          <div class="what-different-listing">
+            <div class="num-heading">
+              <span class="num">03</span>
+              <span class="heading">Everything you need in one place</span>
+            </div>
+            <p>
+              Stop jumping from one service to another to communicate, store
+              files, track tasks and share documents. Manage offers an
+              all-in-one team productivity solution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testionial">
+      <div class="container2">
+        <h1 class="test-heading">What they’ve said</h1>
+
+        <div class="owl-theme owl-carousel">
+          <div class="item">
+            <img src="./images/avatar-anisha.png" alt="" class="item-img" />
+            <div class="test-info">
+              <h3>Anisha Li</h3>
+              <p>
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </div>
+          </div>
+
+          <!-- another item -->
+          <div class="item">
+            <img src="./images/avatar-ali.png" alt="" class="item-img" />
+            <div class="test-info">
+              <h3>Ali Bravo</h3>
+              <p>
+                “We have been able to cancel so many other subscriptions since
+                using Manage. There is no more cross-channel confusion and
+                everyone is much more focused.”
+              </p>
+            </div>
+          </div>
+
+          <!-- another item -->
+          <div class="item">
+            <img src="./images/avatar-richard.png" alt="" class="item-img" />
+            <div class="test-info">
+              <h3>Richard Watts</h3>
+              <p>
+                “Manage allows us to provide structure and process. It keeps us
+                organized and focused. I can’t stop recommending them to
+                everyone I talk to!”
+              </p>
+            </div>
+          </div>
+
+          <!-- another item -->
+          <div class="item">
+            <img src="./images/avatar-shanai.png" alt="" class="item-img" />
+            <div class="test-info">
+              <h3>Shanai Gough</h3>
+              <p>
+                “Their software allows us to track, manage and collaborate on
+                our projects from anywhere. It keeps the whole team in-sync
+                without being intrusive.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center; margin-top: 4em 0">
+        <span class="get-started"><a href="#"> Get Started</a></span>
+      </div>
+    </section>
+
+    <!-- end of testimonial text -->
+    <section>
+      <div class="container3">
+        <div class="simplify-content">
+          <div>
+            <h1 class="card">Simplify how your team works today.</h1>
+          </div>
+          <div>
+            <span class="get-started"
+              ><a
+                href="#"
+                class="card"
+                style="background-color: white; color: hsl(12, 88%, 59%)"
+              >
+                Get Started</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container4">
+        <div class="logo-social">
+          <figure>
+            <img src="./images/logo-footer.svg" class="footer-logo" alt="" />
+          </figure>
+          <div>
+            <ul class="social_icon-nav">
+              <li>
+                <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./images/icon-youtube.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./images/icon-pinterest.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer nav -->
+        <div class="nav card">
+          <ul class="footer-nav nav-1">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+          <ul class="footer-nav nav-2">
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#"> Privacy Policy </a></li>
+          </ul>
+        </div>
+
+        <!-- newsletter -->
+        <div class="newsletter">
+          <form action="" id="form">
+            <div class="form-control">
+              <input
+                type="email"
+                placeholder="Updates in your inbox…"
+                class="email"
+                id="email"
+              />
+              <small>Error Message</small>
+            </div>
+            <div>
+              <input type="submit" class="submit" id="submit" value="Go" />
+            </div>
+          </form>
+          <p class="hide-cr">Copyright 2020. All Rights Reserved</p>
+        </div>
+      </div>
+      <p
+        class="mobile"
+        style="text-align: center; font-size: 16px; color: hsl(227, 12%, 61%)"
+      >
+        Copyright 2020. All Rights Reserved
+      </p>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="http://www.jnathan.com.ng" target="_blank">Nathan</a>.
+      </div>
+    </footer>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
