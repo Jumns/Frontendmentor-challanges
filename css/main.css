@@ -10,10 +10,12 @@ body {
   width: 100%;
   line-height: 35px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -97,8 +99,16 @@ header {
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  margin-top: 2em;
+  margin-top: 2.5em;
   padding: 1em 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999999;
 }
 
 nav {
@@ -108,8 +118,8 @@ nav {
 nav ul {
   position: fixed;
   top: 8em;
-  left: 2em;
-  right: 2em;
+  left: 5%;
+  right: 5%;
   background: white;
   text-align: center;
   border-radius: 0.3em;
@@ -151,7 +161,7 @@ nav ul li a:hover {
 }
 
 .big-header > h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-top: 0;
   font-weight: 700;
@@ -168,7 +178,7 @@ nav ul li a:hover {
   color: #fff;
   font-weight: 400;
   box-shadow: 0 5px 15px hsl(12, 88%, 59%);
-  padding: 1em 2.5em;
+  padding: 0.8em 2.5em;
   border-radius: 1.5em;
 }
 
@@ -262,10 +272,6 @@ nav ul li a:hover {
   position: relative;
 }
 
-.container2 h1 {
-  font-size: 2.8em;
-}
-
 .test-info {
   background-color: hsl(0, 0%, 98%);
   z-index: -1;
@@ -304,13 +310,13 @@ nav ul li a:hover {
   background-position: left left;
   background-repeat: no-repeat;
   background-size: auto;
-  padding: 3em 2em;
+  padding: 6em 2em;
   text-align: center;
   margin-top: 3em;
 }
 
 .container3 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   color: white;
 }
 /* end of simplify */
@@ -342,18 +348,19 @@ footer {
 .email {
   border: none;
   outline: none;
-  padding: 1em 4em 1em 1.5em;
+  padding: 0.5em 1em;
   margin-right: 1em;
   font-size: 17px;
   width: 100%;
   border-radius: 2em;
+  display: block;
 }
 
 .submit {
   border: none;
   outline: none;
   background-color: hsl(12, 88%, 59%);
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   cursor: pointer;
   font-size: 17px;
   color: white;
@@ -496,7 +503,7 @@ MEDIA QUERIES STARTS
     position: absolute;
     top: 0;
     right: 0;
-    width: 550px;
+    width: 500px;
     margin-top: -9em;
     margin-right: -11em;
     z-index: -1;
@@ -510,9 +517,9 @@ MEDIA QUERIES STARTS
     position: absolute;
     top: 50em;
     left: 0;
-    width: 550px;
+    width: 500px;
     margin-top: 5em;
-    margin-left: -20em;
+    margin-left: -15em;
     z-index: -1;
   }
 
@@ -521,6 +528,14 @@ MEDIA QUERIES STARTS
     display: block;
     border-radius: 0;
     margin: 0;
+  }
+
+  .fixed {
+    position: initial;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999999;
   }
 
   nav ul {
@@ -559,7 +574,7 @@ MEDIA QUERIES STARTS
     justify-content: space-between;
     align-items: flex-start;
     width: 90%;
-    margin-top: 2em;
+    margin-top: 2.5em;
     padding: 2em 0;
   }
 
@@ -574,11 +589,12 @@ MEDIA QUERIES STARTS
   }
 
   .big-header > h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-align: left;
     line-height: 1.1em;
     margin: 0 0 1em 0;
     font-weight: 700;
+    width: 100%;
   }
 
   .big-header p,
@@ -613,7 +629,7 @@ MEDIA QUERIES STARTS
     align-items: flex-start;
     width: 90%;
     padding: 2em 0;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
     text-align: center;
   }
 
@@ -663,6 +679,7 @@ MEDIA QUERIES STARTS
   /* carousel */
 
   .container2 {
+    margin-top: 2.5em;
     width: 90%;
     padding: 1em 0;
   }
@@ -716,26 +733,26 @@ MEDIA QUERIES STARTS
   /* simplify */
   .container3 {
     background-image: url(/images/bg-simplify-section-desktop.svg);
-    background-position: center center;
+    background-position: center right;
     background-size: auto;
-    padding: 1em 0;
-    margin-top: 5em;
+    padding: 5em 0;
+    margin-top: 10em;
     flex-wrap: wrap;
   }
 
   .simplify-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 auto;
     width: 90%;
-    padding: 2em 0;
   }
 
   .container3 h1 {
-    font-size: 1.8em;
+    font-size: 2.5em;
     text-align: left;
     line-height: 1.1em;
+    max-width: 500px;
     margin: 0;
   }
 
@@ -761,8 +778,9 @@ MEDIA QUERIES STARTS
   }
 
   .email {
-    padding: 0.7em 1em 0.7em 0.8em;
+    padding: 0.7em 0.8em;
     font-size: 15px;
+    display: block;
   }
 
   .submit {

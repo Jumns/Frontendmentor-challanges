@@ -3,6 +3,7 @@
 const openBtn = document.getElementById("openBtn");
 const closeBtn = document.getElementById("closeBtn");
 const nav = document.getElementById("nav");
+const header = document.getElementById("header");
 const mOverley = document.getElementById("backDrop");
 const form = document.getElementById("form");
 const email = document.getElementById("email");
@@ -54,6 +55,7 @@ openBtn.addEventListener("click", (e) => {
   closeBtn.style.display = "initial";
   openBtn.style.display = "none";
   mOverley.style.display = "block";
+  header.classList.add("fixed");
   e.preventDefault();
 });
 
@@ -62,19 +64,20 @@ closeBtn.addEventListener("click", (e) => {
   closeBtn.style.display = "none";
   openBtn.style.display = "initial";
   mOverley.style.display = "none";
+  header.classList.remove("fixed");
   e.preventDefault();
 });
 
 $(".owl-carousel").owlCarousel({
   loop: true,
-  margin: 20,
+  margin: 15,
   nav: false,
   autoplay: true,
   autoplayTimeout: 4000,
   // animateOut: "slideOutDown",
   // animateIn: "flipInX",
   // items: 1,
-  // stagePadding: 10,
+  stagePadding: 10,
   smartSpeed: 650,
   responsive: {
     0: {
@@ -87,6 +90,7 @@ $(".owl-carousel").owlCarousel({
 
     1100: {
       items: 3,
+      stagePadding: 0,
     },
   },
 });
