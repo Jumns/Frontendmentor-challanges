@@ -7,20 +7,25 @@ body {
   padding: 0;
   font-family: "Be Vietnam", sans-serif;
   font-size: 16px;
-  max-width: 100%;
   line-height: 35px;
   margin: 0 auto;
+  background: url(/images/bg-tablet-pattern.svg),
+    url(/images/bg-tablet-pattern.svg);
+  background-position: left 20vw top -8vh, left 60vw top 70vh;
+  background-size: 100%, 95%;
+  background-repeat: no-repeat;
 }
 
 html {
   overflow-x: hidden;
+  overflow-y: auto;
   scroll-behavior: smooth;
 }
 
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 figure,
@@ -34,6 +39,7 @@ p {
   font-weight: 400;
   font-size: 17px;
   color: hsl(227, 12%, 61%);
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -45,26 +51,6 @@ h6 {
   line-height: 3.5rem;
   color: hsl(228, 39%, 23%);
   font-weight: 700;
-}
-
-.bg-mobile {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 500px;
-  margin-top: -4em;
-  margin-right: -8em;
-  z-index: -1;
-}
-
-.bg-mobile-md {
-  position: absolute;
-  top: 50em;
-  right: 0;
-  width: 400px;
-  margin-top: -10em;
-  margin-right: -15em;
-  z-index: -1;
 }
 
 .bg-desktop {
@@ -98,7 +84,7 @@ header {
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  margin-top: 2.5em;
+  margin-top: 1.5em;
   padding: 1em 0;
 }
 
@@ -144,7 +130,8 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.container {
+.container,
+.container1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,7 +147,7 @@ nav ul li a:hover {
 }
 
 .big-header > h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   text-align: center;
   margin-top: 0;
   font-weight: 700;
@@ -189,15 +176,7 @@ nav ul li a:hover {
 
 /* What's difference SECTION */
 .container1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 2em 0;
   margin-top: 1.5em;
-  text-align: center;
 }
 
 .what-different-heading {
@@ -205,7 +184,7 @@ nav ul li a:hover {
 }
 
 .what-different-heading > h2 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   text-align: center;
   font-weight: 700;
 }
@@ -241,6 +220,7 @@ nav ul li a:hover {
 .num-heading .heading {
   color: hsl(228, 39%, 23%);
   font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .container1 .what-different-listing + .what-different-listing {
@@ -257,17 +237,16 @@ nav ul li a:hover {
 }
 
 .container2 > h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 700;
   margin-bottom: 1em;
 }
 
 .item {
-  width: 100%;
-  height: auto;
+  width: 95%;
   text-align: center;
-  margin: 3em 0;
+  margin: 3em auto;
   position: relative;
 }
 
@@ -323,12 +302,12 @@ nav ul li a:hover {
 /* footer */
 footer {
   background-color: hsl(233, 12%, 13%);
-  padding: 4em 0;
+  padding: 5em 0;
 }
 
 .social_icon-nav li:hover svg path {
   fill: hsl(12, 88%, 59%);
-  transition: 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .container4 {
@@ -353,8 +332,8 @@ footer {
   border: none;
   outline: none;
   padding: 0.5em 1em;
-  margin-right: 1em;
-  font-size: 17px;
+  margin-right: 0.5em;
+  font-size: 16px;
   width: 100%;
   border-radius: 2em;
   display: block;
@@ -369,7 +348,7 @@ footer {
   font-size: 17px;
   color: white;
   border-radius: 2em;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 /* for form validation */
@@ -471,23 +450,25 @@ footer .logo-social {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsl(13, 100%, 96%);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(12, 88%, 59%);
 }
 
 .hide-mobile {
   display: none;
 }
 
-/* 
+/*
 ================================================================
 MEDIA QUERIES STARTS
 ================================================================
 */
 @media screen and (min-width: 750px) {
-  .bg-mobile {
-    display: none;
+  body {
+    background-size: 70%, 70%;
+    background-position: left 50vw top -10vh, right 70vw bottom 130vh;
   }
 
   .mobile-overlay {
@@ -498,33 +479,10 @@ MEDIA QUERIES STARTS
   .hide-desktop,
   .mobile-overlay {
     display: none;
-    position: absolute;
-    top: -20000000em;
-  }
-
-  .bg-desktop {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 500px;
-    margin-top: -9em;
-    margin-right: -11em;
-    z-index: -1;
   }
 
   .card {
     width: 90%;
-  }
-
-  .bg-mobile-md {
-    position: absolute;
-    top: 50em;
-    left: 0;
-    width: 500px;
-    margin-top: 5em;
-    margin-left: -15em;
-    z-index: -1;
   }
 
   .show-desktop {
@@ -539,7 +497,7 @@ MEDIA QUERIES STARTS
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999999999;
+    z-index: 99;
   }
 
   nav ul {
@@ -573,13 +531,10 @@ MEDIA QUERIES STARTS
   }
 
   .container {
-    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
-    width: 90%;
     margin-top: 2.5em;
-    padding: 2em 0;
   }
 
   .big-header {
@@ -593,7 +548,7 @@ MEDIA QUERIES STARTS
   }
 
   .big-header > h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: left;
     line-height: 1.1em;
     margin: 0 0 1em 0;
@@ -616,7 +571,7 @@ MEDIA QUERIES STARTS
 
   .get-started a {
     background-color: hsl(12, 88%, 59%);
-    font-weight: 500;
+    font-weight: 400;
     padding: 0.6em 1.8em;
     font-size: 15px;
     margin-right: auto;
@@ -631,10 +586,8 @@ MEDIA QUERIES STARTS
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 90%;
     padding: 2em 0;
     margin-top: 2.5em;
-    text-align: center;
   }
 
   .what-different-heading {
@@ -662,7 +615,7 @@ MEDIA QUERIES STARTS
   .num-heading {
     background-color: transparent;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     border-radius: 0;
     padding: 0;
@@ -693,36 +646,18 @@ MEDIA QUERIES STARTS
     font-weight: 700;
   }
 
-  .owl-dots {
-    display: none;
-  }
-
   .item {
-    width: 100%;
-    height: auto;
-    text-align: center;
     margin: 1em 0;
-    position: relative;
   }
 
   .container2 h1 {
     font-size: 2.8em;
   }
 
-  .test-info {
-    background-color: hsl(0, 0%, 98%);
-    z-index: -1;
-    margin-top: -2.5em;
-  }
-
   .item .test-info p {
     font-size: 15px;
     padding: 1em 0.5em;
     line-height: 28px;
-  }
-
-  .item .test-info h3 {
-    margin-top: 2em;
   }
 
   .item-img {
@@ -841,14 +776,19 @@ MEDIA QUERIES STARTS
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1100px) and (max-width: 1420px) {
+  body {
+    background-size: 50%, 50%;
+    background-position: left 60vw top -20vh, right 80vw bottom 130vh;
+  }
+
   header,
   .container,
   .container1,
   .container4,
   .simplify-content {
     width: 1050px;
-    max-width: 1440px;
+    max-width: 1320px;
   }
 
   .container2 {
@@ -858,25 +798,12 @@ MEDIA QUERIES STARTS
   .big-header {
     max-width: 550px;
   }
-
-  .bg-desktop {
-    width: 650px;
-    margin-top: -10em;
-    margin-right: -5em;
-  }
-
-  .bg-mobile-md {
-    position: absolute;
-    top: 50em;
-    left: 0;
-    width: 650px;
-    margin-top: 16em;
-    margin-left: -20em;
-    z-index: -1;
+  .item {
+    width: 100%;
   }
 }
 
-/* 
+/*
 ================================================================
 MEDIA QUERIES ENDS
 ================================================================
