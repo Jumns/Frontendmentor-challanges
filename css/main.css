@@ -84,8 +84,9 @@ header {
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  margin-top: 1.5em;
+  margin-top: 2em;
   padding: 1em 0;
+  transition: 0.5s;
 }
 
 .fixed {
@@ -109,6 +110,7 @@ nav ul {
   text-align: center;
   border-radius: 0.3em;
   padding: 3em 0;
+  transition: all 0.5s ease-in;
   z-index: 999;
 }
 
@@ -119,6 +121,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: hsl(228, 39%, 23%);
+  transition: 0.5s;
   display: block;
 }
 
@@ -548,7 +551,7 @@ MEDIA QUERIES STARTS
   }
 
   .big-header > h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: left;
     line-height: 1.1em;
     margin: 0 0 1em 0;
@@ -598,6 +601,7 @@ MEDIA QUERIES STARTS
     text-align: left;
     margin-top: 0;
     line-height: 1.1em;
+    margin-right: 1em;
   }
 
   .what-is-different-content {
@@ -620,6 +624,7 @@ MEDIA QUERIES STARTS
     border-radius: 0;
     padding: 0;
     margin: 0 0 0.5em 1em;
+    margin-left: -6em;
   }
 
   .num-heading .num {
@@ -674,7 +679,7 @@ MEDIA QUERIES STARTS
     background-image: url(/images/bg-simplify-section-desktop.svg);
     background-position: center right;
     background-size: auto;
-    padding: 5em 0;
+    padding: 6em 0;
     margin-top: 10em;
     flex-wrap: wrap;
   }
@@ -785,10 +790,23 @@ MEDIA QUERIES STARTS
   header,
   .container,
   .container1,
-  .container4,
-  .simplify-content {
+  .container2,
+  .container4 {
     width: 1050px;
     max-width: 1320px;
+    margin-top: 6em;
+  }
+
+  .container3 {
+    padding: 8rem;
+  }
+
+  header {
+    margin-top: 2em;
+  }
+
+  .big-header > h1 {
+    font-size: 3.5rem;
   }
 
   .container2 {
@@ -800,6 +818,18 @@ MEDIA QUERIES STARTS
   }
   .item {
     width: 100%;
+  }
+
+  .owl-dots {
+    display: none;
+  }
+
+  .item .test-info p {
+    font-size: 14px;
+  }
+
+  .num-heading {
+    margin-left: -10em;
   }
 }
 
